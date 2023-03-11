@@ -12,9 +12,9 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1678516685,,"wq"
+|2,0,1678522141,,"wq"
 :q
-|2,0,1678516532,,"q"
+|2,0,1678521821,,"q"
 
 # Search String History (newest to oldest):
 
@@ -27,200 +27,249 @@
 # Registers:
 
 # File marks:
-'0  5  35  ~/.gitconfig
-|4,48,5,35,1678516685,"~/.gitconfig"
-'1  102  0  ~/exp0/mpi_pow.cpp
-|4,49,102,0,1678516532,"~/exp0/mpi_pow.cpp"
-'2  24  0  ~/exp0/submit.sh
-|4,50,24,0,1678516379,"~/exp0/submit.sh"
-'3  73  0  ~/exp0/mpi_pow.cpp
-|4,51,73,0,1678516204,"~/exp0/mpi_pow.cpp"
-'4  73  0  ~/exp0/mpi_pow.cpp
-|4,52,73,0,1678516204,"~/exp0/mpi_pow.cpp"
-'5  21  0  ~/exp0/openmp_pow.cpp
-|4,53,21,0,1678516171,"~/exp0/openmp_pow.cpp"
-'6  24  0  ~/exp0/submit.sh
-|4,54,24,0,1678516094,"~/exp0/submit.sh"
+'0  24  25  ~/exp0/openmp_pow.cpp
+|4,48,24,25,1678522141,"~/exp0/openmp_pow.cpp"
+'1  12  21  ~/exp0/Makefile
+|4,49,12,21,1678521821,"~/exp0/Makefile"
+'2  12  21  ~/exp0/Makefile
+|4,50,12,21,1678521711,"~/exp0/Makefile"
+'3  393  0  /home/spack/spack/share/spack/setup-env.sh
+|4,51,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
+'4  24  0  ~/exp0/submit.sh
+|4,52,24,0,1678519912,"~/exp0/submit.sh"
+'5  24  0  ~/exp0/submit.sh
+|4,53,24,0,1678519783,"~/exp0/submit.sh"
+'6  5  35  ~/.gitconfig
+|4,54,5,35,1678516685,"~/.gitconfig"
+'7  102  0  ~/exp0/mpi_pow.cpp
+|4,55,102,0,1678516532,"~/exp0/mpi_pow.cpp"
+'8  24  0  ~/exp0/submit.sh
+|4,56,24,0,1678516379,"~/exp0/submit.sh"
+'9  24  0  ~/exp0/submit.sh
+|4,57,24,0,1678516379,"~/exp0/submit.sh"
 
 # Jumplist (newest first):
+-'  24  25  ~/exp0/openmp_pow.cpp
+|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
+-'  22  0  ~/exp0/openmp_pow.cpp
+|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
+-'  12  21  ~/exp0/Makefile
+|4,39,12,21,1678521821,"~/exp0/Makefile"
+-'  12  21  ~/exp0/Makefile
+|4,39,12,21,1678521821,"~/exp0/Makefile"
+-'  12  21  ~/exp0/Makefile
+|4,39,12,21,1678521711,"~/exp0/Makefile"
+-'  12  21  ~/exp0/Makefile
+|4,39,12,21,1678521711,"~/exp0/Makefile"
+-'  1  0  ~/exp0/Makefile
+|4,39,1,0,1678521020,"~/exp0/Makefile"
+-'  1  0  ~/exp0/Makefile
+|4,39,1,0,1678521020,"~/exp0/Makefile"
+-'  1  0  ~/exp0/Makefile
+|4,39,1,0,1678521020,"~/exp0/Makefile"
+-'  1  0  ~/exp0/Makefile
+|4,39,1,0,1678521020,"~/exp0/Makefile"
+-'  393  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
+-'  393  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
+-'  393  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
+-'  393  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
+-'  393  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
+-'  393  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
+-'  393  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
+-'  393  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
+-'  1  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,1,0,1678520021,"/home/spack/spack/share/spack/setup-env.sh"
+-'  1  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,1,0,1678520021,"/home/spack/spack/share/spack/setup-env.sh"
+-'  1  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,1,0,1678520021,"/home/spack/spack/share/spack/setup-env.sh"
+-'  1  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,1,0,1678520021,"/home/spack/spack/share/spack/setup-env.sh"
+-'  1  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,1,0,1678520021,"/home/spack/spack/share/spack/setup-env.sh"
+-'  1  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,1,0,1678520021,"/home/spack/spack/share/spack/setup-env.sh"
+-'  1  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,1,0,1678520021,"/home/spack/spack/share/spack/setup-env.sh"
+-'  1  0  /home/spack/spack/share/spack/setup-env.sh
+|4,39,1,0,1678520021,"/home/spack/spack/share/spack/setup-env.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519912,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
+-'  24  0  ~/exp0/submit.sh
+|4,39,24,0,1678519783,"~/exp0/submit.sh"
 -'  5  35  ~/.gitconfig
 |4,39,5,35,1678516685,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1678516630,"~/.gitconfig"
--'  102  0  ~/exp0/mpi_pow.cpp
-|4,39,102,0,1678516532,"~/exp0/mpi_pow.cpp"
--'  102  0  ~/exp0/mpi_pow.cpp
-|4,39,102,0,1678516532,"~/exp0/mpi_pow.cpp"
--'  73  0  ~/exp0/mpi_pow.cpp
-|4,39,73,0,1678516383,"~/exp0/mpi_pow.cpp"
--'  73  0  ~/exp0/mpi_pow.cpp
-|4,39,73,0,1678516383,"~/exp0/mpi_pow.cpp"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516379,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516379,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516379,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516379,"~/exp0/submit.sh"
--'  73  0  ~/exp0/mpi_pow.cpp
-|4,39,73,0,1678516204,"~/exp0/mpi_pow.cpp"
--'  73  0  ~/exp0/mpi_pow.cpp
-|4,39,73,0,1678516204,"~/exp0/mpi_pow.cpp"
--'  73  0  ~/exp0/mpi_pow.cpp
-|4,39,73,0,1678516204,"~/exp0/mpi_pow.cpp"
--'  73  0  ~/exp0/mpi_pow.cpp
-|4,39,73,0,1678516204,"~/exp0/mpi_pow.cpp"
--'  1  0  ~/exp0/mpi_pow.cpp
-|4,39,1,0,1678516177,"~/exp0/mpi_pow.cpp"
--'  1  0  ~/exp0/mpi_pow.cpp
-|4,39,1,0,1678516177,"~/exp0/mpi_pow.cpp"
--'  1  0  ~/exp0/mpi_pow.cpp
-|4,39,1,0,1678516177,"~/exp0/mpi_pow.cpp"
--'  1  0  ~/exp0/mpi_pow.cpp
-|4,39,1,0,1678516177,"~/exp0/mpi_pow.cpp"
--'  1  0  ~/exp0/mpi_pow.cpp
-|4,39,1,0,1678516177,"~/exp0/mpi_pow.cpp"
--'  1  0  ~/exp0/mpi_pow.cpp
-|4,39,1,0,1678516177,"~/exp0/mpi_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  21  0  ~/exp0/openmp_pow.cpp
-|4,39,21,0,1678516171,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  1  0  ~/exp0/openmp_pow.cpp
-|4,39,1,0,1678516106,"~/exp0/openmp_pow.cpp"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  24  0  ~/exp0/submit.sh
-|4,39,24,0,1678516094,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
--'  1  0  ~/exp0/submit.sh
-|4,39,1,0,1678516024,"~/exp0/submit.sh"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
+-'  5  35  ~/.gitconfig
+|4,39,5,35,1678516685,"~/.gitconfig"
 
 # History of marks within files (newest to oldest):
+
+> ~/exp0/openmp_pow.cpp
+	*	1678522140	0
+	"	24	25
+	^	24	26
+	.	9	27
+	+	9	27
+
+> ~/exp0/Makefile
+	*	1678521817	0
+	"	12	21
+
+> /home/spack/spack/share/spack/setup-env.sh
+	*	1678520909	0
+	"	393	0
+
+> ~/exp0/submit.sh
+	*	1678519910	0
+	"	24	0
 
 > ~/.gitconfig
 	*	1678516684	0
@@ -235,11 +284,3 @@
 > ~/exp0/mpi_pow.cpp
 	*	1678516530	0
 	"	102	0
-
-> ~/exp0/submit.sh
-	*	1678516377	0
-	"	24	0
-
-> ~/exp0/openmp_pow.cpp
-	*	1678516165	0
-	"	21	0
