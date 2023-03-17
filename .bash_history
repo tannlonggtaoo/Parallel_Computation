@@ -28,3 +28,8 @@ git reset --hard HEAD^
 ls
 git status
 exit
+vim ./.profile 
+git status
+git add .
+git commit -m "set unix"
+exit

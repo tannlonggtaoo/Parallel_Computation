@@ -12,9 +12,11 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1679026941,,"wq"
+|2,0,1679027150,,"wq"
 :set ff=unix
-|2,0,1679026934,,"set ff=unix"
+|2,0,1679027147,,"set ff=unix"
+:set ff-unix
+|2,0,1679027132,,"set ff-unix"
 :q
 |2,0,1678523062,,"q"
 
@@ -29,40 +31,180 @@
 # Registers:
 
 # File marks:
-'0  3  0  ~/.profile
-|4,48,3,0,1679026941,"~/.profile"
-'1  128  0  ~/exp0/mpi_pow.cpp
-|4,49,128,0,1678523797,"~/exp0/mpi_pow.cpp"
-'2  1  0  ~/exp0/openmp_pow
-|4,50,1,0,1678523062,"~/exp0/openmp_pow"
-'3  1  0  ~/mpi_pow.cpp
-|4,51,1,0,1678522963,"~/mpi_pow.cpp"
-'4  24  25  ~/exp0/openmp_pow.cpp
-|4,52,24,25,1678522141,"~/exp0/openmp_pow.cpp"
-'5  12  21  ~/exp0/Makefile
-|4,53,12,21,1678521821,"~/exp0/Makefile"
-'6  12  21  ~/exp0/Makefile
-|4,54,12,21,1678521711,"~/exp0/Makefile"
-'7  393  0  /home/spack/spack/share/spack/setup-env.sh
-|4,55,393,0,1678520910,"/home/spack/spack/share/spack/setup-env.sh"
-'8  24  0  ~/exp0/submit.sh
-|4,56,24,0,1678519912,"~/exp0/submit.sh"
-'9  24  0  ~/exp0/submit.sh
-|4,57,24,0,1678519783,"~/exp0/submit.sh"
+'0  3  0  ~/.bash_logout
+|4,48,3,0,1679027150,"~/.bash_logout"
+'1  3  0  ~/.bash_history
+|4,49,3,0,1679027119,"~/.bash_history"
+'2  4  0  ~/.bashrc
+|4,50,4,0,1679027093,"~/.bashrc"
+'3  3  0  ~/.profile
+|4,51,3,0,1679026941,"~/.profile"
+'4  128  0  ~/exp0/mpi_pow.cpp
+|4,52,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+'5  1  0  ~/exp0/openmp_pow
+|4,53,1,0,1678523062,"~/exp0/openmp_pow"
+'6  1  0  ~/mpi_pow.cpp
+|4,54,1,0,1678522963,"~/mpi_pow.cpp"
+'7  24  25  ~/exp0/openmp_pow.cpp
+|4,55,24,25,1678522141,"~/exp0/openmp_pow.cpp"
+'8  12  21  ~/exp0/Makefile
+|4,56,12,21,1678521821,"~/exp0/Makefile"
+'9  12  21  ~/exp0/Makefile
+|4,57,12,21,1678521711,"~/exp0/Makefile"
 
 # Jumplist (newest first):
+-'  3  0  ~/.bash_logout
+|4,39,3,0,1679027150,"~/.bash_logout"
+-'  1  0  ~/.bash_logout
+|4,39,1,0,1679027126,"~/.bash_logout"
+-'  3  0  ~/.bash_history
+|4,39,3,0,1679027119,"~/.bash_history"
+-'  3  0  ~/.bash_history
+|4,39,3,0,1679027119,"~/.bash_history"
+-'  1  0  ~/.bash_history
+|4,39,1,0,1679027108,"~/.bash_history"
+-'  1  0  ~/.bash_history
+|4,39,1,0,1679027108,"~/.bash_history"
+-'  4  0  ~/.bashrc
+|4,39,4,0,1679027093,"~/.bashrc"
+-'  4  0  ~/.bashrc
+|4,39,4,0,1679027093,"~/.bashrc"
+-'  4  0  ~/.bashrc
+|4,39,4,0,1679027093,"~/.bashrc"
+-'  4  0  ~/.bashrc
+|4,39,4,0,1679027093,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1679027079,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1679027079,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1679027079,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1679027079,"~/.bashrc"
 -'  3  0  ~/.profile
 |4,39,3,0,1679026941,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679026941,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679026941,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679026941,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679026941,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679026941,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679026941,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679026941,"~/.profile"
+-'  1  0  ~/.profile
+|4,39,1,0,1679026919,"~/.profile"
+-'  1  0  ~/.profile
+|4,39,1,0,1679026919,"~/.profile"
+-'  1  0  ~/.profile
+|4,39,1,0,1679026919,"~/.profile"
+-'  1  0  ~/.profile
+|4,39,1,0,1679026919,"~/.profile"
+-'  1  0  ~/.profile
+|4,39,1,0,1679026919,"~/.profile"
+-'  1  0  ~/.profile
+|4,39,1,0,1679026919,"~/.profile"
+-'  1  0  ~/.profile
+|4,39,1,0,1679026919,"~/.profile"
 -'  1  0  ~/.profile
 |4,39,1,0,1679026919,"~/.profile"
 -'  128  0  ~/exp0/mpi_pow.cpp
 |4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
 -'  128  0  ~/exp0/mpi_pow.cpp
 |4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
+-'  128  0  ~/exp0/mpi_pow.cpp
+|4,39,128,0,1678523797,"~/exp0/mpi_pow.cpp"
 -'  1  0  ~/exp0/openmp_pow
 |4,39,1,0,1678523062,"~/exp0/openmp_pow"
 -'  1  0  ~/exp0/openmp_pow
 |4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  1  0  ~/exp0/openmp_pow
+|4,39,1,0,1678523062,"~/exp0/openmp_pow"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
+-'  112  0  ~/exp0/mpi_pow.cpp
+|4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
 -'  112  0  ~/exp0/mpi_pow.cpp
 |4,39,112,0,1678522974,"~/exp0/mpi_pow.cpp"
 -'  112  0  ~/exp0/mpi_pow.cpp
@@ -79,180 +221,52 @@
 |4,39,1,0,1678522963,"~/mpi_pow.cpp"
 -'  1  0  ~/mpi_pow.cpp
 |4,39,1,0,1678522963,"~/mpi_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  24  25  ~/exp0/openmp_pow.cpp
-|4,39,24,25,1678522141,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  22  0  ~/exp0/openmp_pow.cpp
-|4,39,22,0,1678522010,"~/exp0/openmp_pow.cpp"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521821,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  12  21  ~/exp0/Makefile
-|4,39,12,21,1678521711,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
--'  1  0  ~/exp0/Makefile
-|4,39,1,0,1678521020,"~/exp0/Makefile"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
+-'  1  0  ~/mpi_pow.cpp
+|4,39,1,0,1678522963,"~/mpi_pow.cpp"
 
 # History of marks within files (newest to oldest):
+
+> ~/.bash_logout
+	*	1679027149	0
+	"	3	0
+
+> ~/.bash_history
+	*	1679027116	0
+	"	3	0
+
+> ~/.bashrc
+	*	1679027089	0
+	"	4	0
 
 > ~/.profile
 	*	1679026938	0
