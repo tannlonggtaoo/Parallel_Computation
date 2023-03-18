@@ -40,3 +40,22 @@ vim .bash_history
 vim .bash_logout
 git commit -am "set unix again"
 exit
+ls -al
+cp -R /home/course/hpc/assignments/2023/exp1 ~/
+cd ~/exp1/
+ls -a
+spack load openmpi
+./home/spack/spack/share/spack/setup-env.sh
+. /home/spack/spack/share/spack/setup-env.sh
+spack load openmpi
+vim Makefile 
+make
+ls -al
+vim mpi_async.cpp 
+vim mpi_sync.cpp 
+vim mpi_async.cpp 
+diff mpi_async.cpp mpi_sync.cpp 
+cd ..
+git add .
+git commit -m "exp1 dir added"
+exit
