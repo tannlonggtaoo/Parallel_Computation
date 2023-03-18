@@ -33,3 +33,10 @@ git status
 git add .
 git commit -m "set unix"
 exit
+ls
+ls -a
+vim .bashrc
+vim .bash_history 
+vim .bash_logout
+git commit -am "set unix again"
+exit
