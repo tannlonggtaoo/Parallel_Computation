@@ -59,3 +59,27 @@ cd ..
 git add .
 git commit -m "exp1 dir added"
 exit
+ls
+git status
+git reset
+git status
+git reset
+ls ./exp1
+vim report.md
+vim ./exp1/report.md
+git reset --hard
+git status
+git reset --hard
+git reset HEAD^ --hard
+git branch main
+git checkout main
+ls ./exp1
+git reflog
+git log
+git status
+ls ./exp1 -la
+git config receive.denyCurrentBranch updateInstead
+ls ./exp1 -la
+vim report.md
+vim ./exp1/report.md
+git log
