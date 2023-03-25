@@ -83,3 +83,17 @@ ls ./exp1 -la
 vim report.md
 vim ./exp1/report.md
 git log
+git status
+git ignore
+ls -al
+vim .gitignore
+vim .nv
+vim .profile 
+vim .gitignore
+git status
+git add .
+git status
+git commit -m "git ignore"
+ll
+ls
+git status
