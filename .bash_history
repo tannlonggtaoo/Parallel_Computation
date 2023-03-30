@@ -97,3 +97,19 @@ git commit -m "git ignore"
 ll
 ls
 git status
+ls
+cp -R /home/course/hpc/assignments/2023/exp2 ~/
+cd exp2
+ls
+ls -a
+cd ..
+ls
+git status
+git add .
+git commit -m "exp2 init"
+git status
+exit
+tmux set-option -g mouse on
+exit
+tmux
+exit
