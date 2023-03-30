@@ -113,3 +113,37 @@ tmux set-option -g mouse on
 exit
 tmux
 exit
+tmux split-window -h
+sshhcp
+sshhpc
+ls
+exit
+exit
+ls
+cd exp2/
+ls
+vim allreduce.cpp 
+spack load openmpi
+. /home/spack/spack/share/spack/setup-env.sh
+spack load openmpi
+ls
+mpicxx allreduce.cpp -O3 -std=c++11 -o allreduce
+ls
+srun -N 4 -n 4 ./allreduce 10 100000000
+sinfo
+srun -N 4 -n 4 ./allreduce 10 100000000
+srun -N 2 -n 4 ./allreduce 10 100000000
+git status
+cd ..
+git status
+cd exp2
+ls -la
+cd ..
+git status
+ls -a
+cat .gitignore 
+git commit -m "compiled"
+git commit -am "compiled"
+vim ./exp2/allreduce.cpp 
+tmux
+exit

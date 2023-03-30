@@ -14,10 +14,10 @@
 $
 
 # Command Line History (newest to oldest):
+:q
+|2,0,1680181470,,"q"
 :wq
 |2,0,1680166789,,"wq"
-:q
-|2,0,1679195130,,"q"
 :qw
 |2,0,1679139387,,"qw"
 :set ff=unix
@@ -39,35 +39,47 @@ $
 
 # File marks:
 '0  101  0  ~/exp2/allreduce.cpp
-|4,48,101,0,1680166789,"~/exp2/allreduce.cpp"
-'1  3  7  ~/.gitignore
-|4,49,3,7,1679195169,"~/.gitignore"
-'2  3  0  ~/.profile
-|4,50,3,0,1679195130,"~/.profile"
-'3  8  0  ~/.nv
-|4,51,8,0,1679195117,"~/.nv"
-'4  1  0  ~/.gitignore
-|4,52,1,0,1679195085,"~/.gitignore"
+|4,48,101,0,1680181470,"~/exp2/allreduce.cpp"
+'1  101  0  ~/exp2/allreduce.cpp
+|4,49,101,0,1680166789,"~/exp2/allreduce.cpp"
+'2  3  7  ~/.gitignore
+|4,50,3,7,1679195169,"~/.gitignore"
+'3  3  0  ~/.profile
+|4,51,3,0,1679195130,"~/.profile"
+'4  8  0  ~/.nv
+|4,52,8,0,1679195117,"~/.nv"
 '5  1  0  ~/.gitignore
 |4,53,1,0,1679195085,"~/.gitignore"
-'6  1  0  ~/exp1/report.md
-|4,54,1,0,1679144511,"~/exp1/report.md"
-'7  1  0  ~/report.md
-|4,55,1,0,1679144502,"~/report.md"
-'8  164  0  ~/exp1/task2.txt
-|4,56,164,0,1679142950,"~/exp1/task2.txt"
-'9  79  0  ~/exp1/mpi_async.cpp
-|4,57,79,0,1679142930,"~/exp1/mpi_async.cpp"
+'6  1  0  ~/.gitignore
+|4,54,1,0,1679195085,"~/.gitignore"
+'7  1  0  ~/exp1/report.md
+|4,55,1,0,1679144511,"~/exp1/report.md"
+'8  1  0  ~/report.md
+|4,56,1,0,1679144502,"~/report.md"
+'9  164  0  ~/exp1/task2.txt
+|4,57,164,0,1679142950,"~/exp1/task2.txt"
 
 # Jumplist (newest first):
 -'  101  0  ~/exp2/allreduce.cpp
+|4,39,101,0,1680181470,"~/exp2/allreduce.cpp"
+-'  101  0  ~/exp2/allreduce.cpp
 |4,39,101,0,1680166789,"~/exp2/allreduce.cpp"
+-'  1  0  ~/exp2/allreduce.cpp
+|4,39,1,0,1680166773,"~/exp2/allreduce.cpp"
 -'  1  0  ~/exp2/allreduce.cpp
 |4,39,1,0,1680166773,"~/exp2/allreduce.cpp"
 -'  3  7  ~/.gitignore
 |4,39,3,7,1679195169,"~/.gitignore"
 -'  3  7  ~/.gitignore
 |4,39,3,7,1679195169,"~/.gitignore"
+-'  3  7  ~/.gitignore
+|4,39,3,7,1679195169,"~/.gitignore"
+-'  3  7  ~/.gitignore
+|4,39,3,7,1679195169,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195140,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195140,"~/.gitignore"
 -'  1  0  ~/.gitignore
 |4,39,1,0,1679195140,"~/.gitignore"
 -'  1  0  ~/.gitignore
@@ -80,6 +92,14 @@ $
 |4,39,3,0,1679195130,"~/.profile"
 -'  3  0  ~/.profile
 |4,39,3,0,1679195130,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679195130,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679195130,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679195130,"~/.profile"
+-'  3  0  ~/.profile
+|4,39,3,0,1679195130,"~/.profile"
 -'  8  0  ~/.nv
 |4,39,8,0,1679195117,"~/.nv"
 -'  8  0  ~/.nv
@@ -96,6 +116,38 @@ $
 |4,39,8,0,1679195117,"~/.nv"
 -'  8  0  ~/.nv
 |4,39,8,0,1679195117,"~/.nv"
+-'  8  0  ~/.nv
+|4,39,8,0,1679195117,"~/.nv"
+-'  8  0  ~/.nv
+|4,39,8,0,1679195117,"~/.nv"
+-'  8  0  ~/.nv
+|4,39,8,0,1679195117,"~/.nv"
+-'  8  0  ~/.nv
+|4,39,8,0,1679195117,"~/.nv"
+-'  8  0  ~/.nv
+|4,39,8,0,1679195117,"~/.nv"
+-'  8  0  ~/.nv
+|4,39,8,0,1679195117,"~/.nv"
+-'  8  0  ~/.nv
+|4,39,8,0,1679195117,"~/.nv"
+-'  8  0  ~/.nv
+|4,39,8,0,1679195117,"~/.nv"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195085,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195085,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195085,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195085,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195085,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195085,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195085,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1679195085,"~/.gitignore"
 -'  1  0  ~/.gitignore
 |4,39,1,0,1679195085,"~/.gitignore"
 -'  1  0  ~/.gitignore
@@ -176,95 +228,43 @@ $
 |4,39,1,0,1679144511,"~/exp1/report.md"
 -'  1  0  ~/exp1/report.md
 |4,39,1,0,1679144511,"~/exp1/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
--'  1  0  ~/report.md
-|4,39,1,0,1679144502,"~/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
+-'  1  0  ~/exp1/report.md
+|4,39,1,0,1679144511,"~/exp1/report.md"
 
 # History of marks within files (newest to oldest):
 
 > ~/exp2/allreduce.cpp
-	*	1680166787	0
+	*	1680181469	0
 	"	101	0
 
 > ~/.gitignore
