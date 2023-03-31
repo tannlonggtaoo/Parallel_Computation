@@ -30,17 +30,24 @@ void Ring_Allreduce(void* sendbuf, void* recvbuf, int n, MPI_Comm comm, int comm
     int last_block_sz = n - block_sz * (comm_sz - 1);
 
     // debug
-    printf("[info] @ process %d/%d, bufsize %d, block_sz %d, last_block_sz %d\n", my_rank, comm_sz, n, block_sz, last_block_sz);
+    // printf("[info] @ process %d/%d, bufsize %d, block_sz %d, last_block_sz %d\n", my_rank, comm_sz, n, block_sz, last_block_sz);
     // end of debug
+
+    // tmp variable for communication
+    // note that last_block_sz >= block_sz
+    float* recvnum = new float[last_block_sz];
+    MPI_Request sendrequest;
+    MPI_Request recvrequest;
+    MPI_Status recvstatus;
 
     // STEP 1 : reduce-scatter
     for (int k = 0; k < (comm_sz - 1); k++)
     {
-        MPI_Request sendrequest;
+        
         int sendsize = ((comm_sz + my_rank - k) % comm_sz) == (comm_sz - 1) ? last_block_sz : block_sz;
 
         // debug
-        printf("proc %d : k %d, block %d -> proc %d\n", my_rank, k, (comm_sz + my_rank - k) % comm_sz, (my_rank + 1) % comm_sz);
+        // printf("proc %d : k %d, block %d -> proc %d\n", my_rank, k, (comm_sz + my_rank - k) % comm_sz, (my_rank + 1) % comm_sz);
         // end of debug
 
         if (sendsize > 0)
@@ -57,13 +64,11 @@ void Ring_Allreduce(void* sendbuf, void* recvbuf, int n, MPI_Comm comm, int comm
         int recvsize = ((comm_sz + my_rank - k - 1) % comm_sz) == (comm_sz - 1) ? last_block_sz : block_sz;
         
         // debug
-        printf("proc %d : k %d, block %d <- proc %d\n", my_rank, k, (comm_sz + my_rank - k - 1) % comm_sz, (comm_sz + my_rank - 1) % comm_sz);
+        // printf("proc %d : k %d, block %d <- proc %d\n", my_rank, k, (comm_sz + my_rank - k - 1) % comm_sz, (comm_sz + my_rank - 1) % comm_sz);
         // end of debug
 
         if (recvsize > 0)
         {
-        MPI_Request recvrequest;
-        float* recvnum = new float[recvsize];
         MPI_Irecv(recvnum,
                   recvsize,
                   MPI_FLOAT,
@@ -71,15 +76,13 @@ void Ring_Allreduce(void* sendbuf, void* recvbuf, int n, MPI_Comm comm, int comm
                   MPI_ANY_TAG,
                   comm,
                   &recvrequest);
-        MPI_Status recvstatus;
+        
         MPI_Wait(&recvrequest, &recvstatus);
 
-        
         for (int i = 0; i < recvsize; i++)
             {
                 (*((float*)recvbuf + ((comm_sz + my_rank - k - 1) % comm_sz) * block_sz + i)) += recvnum[i]; 
             }
-        delete [] recvnum;
         }
     }
 
@@ -91,12 +94,11 @@ void Ring_Allreduce(void* sendbuf, void* recvbuf, int n, MPI_Comm comm, int comm
     // STEP 2 : allgather
     for (int k = 0; k < (comm_sz - 1); k++)
     {
-        MPI_Request sendrequest;
         int sendsize = ((comm_sz + my_rank + 1 - k) % comm_sz) == (comm_sz - 1) ? last_block_sz : block_sz;
 
-    // debug
-        printf("proc %d : k %d, block %d --cp--> proc %d\n", my_rank, k, (comm_sz + my_rank + 1 - k) % comm_sz, (my_rank + 1) % comm_sz);
-    // end of debug
+        // debug
+        // printf("proc %d : k %d, block %d --cp--> proc %d\n", my_rank, k, (comm_sz + my_rank + 1 - k) % comm_sz, (my_rank + 1) % comm_sz);
+        // end of debug
 
         if (sendsize > 0)
         {
@@ -112,13 +114,11 @@ void Ring_Allreduce(void* sendbuf, void* recvbuf, int n, MPI_Comm comm, int comm
         int recvsize = ((comm_sz + my_rank - k) % comm_sz) == (comm_sz - 1) ? last_block_sz : block_sz;
         
         // debug
-        printf("proc %d : k %d, block %d <--cp-- proc %d\n", my_rank, k, (comm_sz + my_rank - k) % comm_sz, (comm_sz + my_rank - 1) % comm_sz);
+        // printf("proc %d : k %d, block %d <--cp-- proc %d\n", my_rank, k, (comm_sz + my_rank - k) % comm_sz, (comm_sz + my_rank - 1) % comm_sz);
         // end of debug
 
         if (recvsize > 0)
         {
-            MPI_Request recvrequest;
-            float* recvnum = new float[recvsize];
             MPI_Irecv(recvnum,
                       recvsize,
                       MPI_FLOAT,
@@ -126,16 +126,16 @@ void Ring_Allreduce(void* sendbuf, void* recvbuf, int n, MPI_Comm comm, int comm
                       MPI_ANY_TAG,
                       comm,
                       &recvrequest);
-            MPI_Status recvstatus;
             MPI_Wait(&recvrequest, &recvstatus);
 
             for (int i = 0; i < recvsize; i++)
             {
                 (*((float*)recvbuf + ((comm_sz + my_rank - k) % comm_sz) * block_sz + i)) = recvnum[i];
             }
-            delete [] recvnum;
+            
         }
     }
+    delete [] recvnum;
     MPI_Barrier(comm);
 }
 
@@ -163,6 +163,11 @@ int main(int argc, char *argv[])
     int my_rank;
     MPI_Comm_size(MPI_COMM_WORLD, &comm_sz);
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+
+    if (my_rank == 0)
+    {
+        std::cout << "ITER " << ITER << ", n " << n << std::endl;
+    }
     
     srand(time(NULL) + my_rank);
     for (int i = 0; i < n; ++i)
@@ -171,8 +176,8 @@ int main(int argc, char *argv[])
     memcpy(ring_sendbuf, mpi_sendbuf, n * sizeof(float));
 
     // debug
-    printf("proc %d init\n", my_rank);
-    printbuf((float*)ring_sendbuf, n);
+    // printf("proc %d init\n", my_rank);
+    // printbuf((float*)ring_sendbuf, n);
     // end of debug
 
     //warmup and check
@@ -188,9 +193,9 @@ int main(int argc, char *argv[])
         }
 
     // debug
-    printf("correct %d, proc %d reduced\n", (int)correct, my_rank);
-    printbuf((float*)mpi_recvbuf, n);
-    printbuf((float*)ring_recvbuf, n);
+    // printf("correct %d, proc %d reduced\n", (int)correct, my_rank);
+    // printbuf((float*)mpi_recvbuf, n);
+    // printbuf((float*)ring_recvbuf, n);
     // end of debug
 
     if (correct)
