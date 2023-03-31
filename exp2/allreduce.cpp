@@ -37,6 +37,7 @@ void Ring_Allreduce(void* sendbuf, void* recvbuf, int n, MPI_Comm comm, int comm
     // note that last_block_sz >= block_sz
     float* recvnum = new float[last_block_sz];
     MPI_Request sendrequest;
+    MPI_Status sendstatus;
     MPI_Request recvrequest;
     MPI_Status recvstatus;
 
@@ -78,6 +79,7 @@ void Ring_Allreduce(void* sendbuf, void* recvbuf, int n, MPI_Comm comm, int comm
                   &recvrequest);
         
         MPI_Wait(&recvrequest, &recvstatus);
+	MPI_Wait(&sendrequest, &sendstatus);
 
         for (int i = 0; i < recvsize; i++)
             {
@@ -127,6 +129,7 @@ void Ring_Allreduce(void* sendbuf, void* recvbuf, int n, MPI_Comm comm, int comm
                       comm,
                       &recvrequest);
             MPI_Wait(&recvrequest, &recvstatus);
+	    MPI_Wait(&sendrequest, &sendstatus);
 
             for (int i = 0; i < recvsize; i++)
             {
