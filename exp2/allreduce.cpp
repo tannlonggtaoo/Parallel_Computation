@@ -169,7 +169,7 @@ int main(int argc, char *argv[])
 
     if (my_rank == 0)
     {
-        std::cout << "ITER " << ITER << ", n " << n << std::endl;
+        std::cout << "ITER " << ITER << ", n " << n << ", procnum " << comm_sz << std::endl;
     }
     
     srand(time(NULL) + my_rank);
