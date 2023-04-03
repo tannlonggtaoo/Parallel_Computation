@@ -1,0 +1,8 @@
+Sort uniform parts: 1893.39 ms
+Sort random parts: 4261.67 ms
+Sort uniform parts: 72.5913 ms
+Sort random parts: 1419.05 ms
+Sort uniform parts: 75.0541 ms
+Sort random parts: 1370.61 ms
+Sort uniform parts: 67.7922 ms
+Sort random parts: 1451 ms
