@@ -17,14 +17,17 @@ void Worker::sort() {
   // data: data = new float[block_len]
   // each proc has its own worker
 
+  // STEP -1: if i am empty then return
+  if (this->block_len == 0) return;
+
   // STEP 0: sort in process
   std::sort(this->data, this->data + this->block_len);
 
   // STEP 1: pair-wise merging
   MPI_Status send_status, recv_status;
   MPI_Request send_request, recv_request;
-  float* mergebuf = new float[this->block_len * 2 + this->nprocs];
-  // the last block_len < other block_len + nprocs
+  int comm_block_len = ceiling(this->n,this->nprocs);
+  float* mergebuf = new float[comm_block_len + this->block_len];
   // std::merge is enough, do not use std::inplace_merge
 
   int direction;
@@ -41,13 +44,13 @@ void Worker::sort() {
     //printf("[proc %d] @ iter %d : dir=%d, peerrank=%d\n",this->rank,i,direction,peerrank);
     //endofdebug
 
-    if ((peerrank < 0) || (peerrank >= this->nprocs))
+    if ((peerrank < 0) || (comm_block_len * peerrank >= (int)this->n))
     {
       continue; // can be optimized later...?
     }
     MPI_Irecv(
       mergebuf + this->block_len,
-      this->block_len + this->nprocs,
+      comm_block_len,
       MPI_FLOAT,
       peerrank,
       0,
@@ -63,6 +66,14 @@ void Worker::sort() {
       &send_request);
     MPI_Wait(&recv_request, &recv_status);
     MPI_Get_count(&recv_status, MPI_FLOAT, &peerlen);
+
+    if (((direction == 1) && (this->data[this->block_len - 1] <= mergebuf[this->block_len])) 
+      || ((direction == -1) && (this->data[0] >= mergebuf[this->block_len + peerlen - 1])))
+    {
+      continue;
+    }
+
+    
     std::merge(
       this->data,
       this->data + this->block_len,
