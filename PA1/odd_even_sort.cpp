@@ -33,6 +33,8 @@ void Worker::sort() {
   int direction;
   int peerrank;
   int peerlen;
+  float peermargin;
+  float mymargin;
 
   // TODO : try min-max first
   for (int i = 0; i < this->nprocs; i++)
@@ -40,20 +42,48 @@ void Worker::sort() {
     direction = (i % 2 == 0 ? 1 : -1) * (this->rank % 2 == 0 ? 1 : -1);
     peerrank = this->rank + direction;
 
-    //debug
-    //printf("[proc %d] @ iter %d : dir=%d, peerrank=%d\n",this->rank,i,direction,peerrank);
-    //endofdebug
-
     if ((peerrank < 0) || (comm_block_len * peerrank >= (int)this->n))
     {
-      continue; // can be optimized later...?
+      continue;
     }
+
+    // get margin num
+    MPI_Irecv(
+      &peermargin,
+      1,
+      MPI_FLOAT,
+      peerrank,
+      i,
+      MPI_COMM_WORLD,
+      &recv_request);
+
+    mymargin = this->data[(direction == 1) ? (this->block_len - 1) : 0];
+
+    MPI_Isend(
+      &mymargin,
+      1,
+      MPI_FLOAT,
+      peerrank,
+      i,
+      MPI_COMM_WORLD,
+      &send_request);
+
+    MPI_Wait(&recv_request, &recv_status);
+    MPI_Wait(&send_request, &send_status);
+
+    if (((direction == 1) && (mymargin <= peermargin)) 
+      || ((direction == -1) && (peermargin <= mymargin)))
+    {
+      continue;
+    }
+
+    // get all if needed
     MPI_Irecv(
       mergebuf + this->block_len,
       comm_block_len,
       MPI_FLOAT,
       peerrank,
-      0,
+      i,
       MPI_COMM_WORLD,
       &recv_request);
     MPI_Isend(
@@ -61,20 +91,12 @@ void Worker::sort() {
       this->block_len,
       MPI_FLOAT,
       peerrank,
-      0,
+      i,
       MPI_COMM_WORLD,
       &send_request);
     MPI_Wait(&recv_request, &recv_status);
     MPI_Get_count(&recv_status, MPI_FLOAT, &peerlen);
 
-    if (((direction == 1) && (this->data[this->block_len - 1] <= mergebuf[this->block_len])) 
-      || ((direction == -1) && (this->data[0] >= mergebuf[this->block_len + peerlen - 1])))
-    {
-      MPI_Wait(&send_request, &send_status);
-      continue;
-    }
-
-    
     std::merge(
       this->data,
       this->data + this->block_len,
