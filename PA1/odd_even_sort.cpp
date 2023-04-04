@@ -80,4 +80,5 @@ void Worker::sort() {
     // last step
     MPI_Wait(&send_request, &send_status);
   }
+  delete [] mergebuf;
 }
