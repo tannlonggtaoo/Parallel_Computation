@@ -70,6 +70,7 @@ void Worker::sort() {
     if (((direction == 1) && (this->data[this->block_len - 1] <= mergebuf[this->block_len])) 
       || ((direction == -1) && (this->data[0] >= mergebuf[this->block_len + peerlen - 1])))
     {
+      MPI_Wait(&send_request, &send_status);
       continue;
     }
 
