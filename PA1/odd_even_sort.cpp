@@ -18,7 +18,7 @@ void Worker::sort() {
   // each proc has its own worker
 
   // STEP 0: sort in process
-  std::sort(std::begin(this->data), std::begin(this->data) + this->block_len);
+  std::sort(this->data, this->data + this->block_len);
 
   // STEP 1: pair-wise merging
   MPI_Status send_status, recv_status;
@@ -36,6 +36,11 @@ void Worker::sort() {
   {
     direction = (i % 2 == 0 ? 1 : -1) * (this->rank % 2 == 0 ? 1 : -1);
     peerrank = this->rank + direction;
+
+    //debug
+    //printf("[proc %d] @ iter %d : dir=%d, peerrank=%d\n",this->rank,i,direction,peerrank);
+    //endofdebug
+
     if ((peerrank < 0) || (peerrank >= this->nprocs))
     {
       continue; // can be optimized later...?
@@ -59,10 +64,11 @@ void Worker::sort() {
     MPI_Wait(&recv_request, &recv_status);
     MPI_Get_count(&recv_status, MPI_FLOAT, &peerlen);
     std::merge(
-      std::begin(this->data),
-      std::begin(this->data) + this->block_len,
-      std::begin(mergebuf) + this->block_len,
-      std::begin(mergebuf) + this->block_len + peerlen);
+      this->data,
+      this->data + this->block_len,
+      mergebuf + this->block_len,
+      mergebuf + this->block_len + peerlen,
+      mergebuf);
     if (direction == 1)
     {
       memcpy(this->data, mergebuf, this->block_len * sizeof(float));
