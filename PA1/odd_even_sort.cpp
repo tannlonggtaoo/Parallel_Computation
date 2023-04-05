@@ -80,19 +80,23 @@ void Worker::sort()
     {
       MPI_Wait(&recv_request[i%2], &recv_status[i%2]);
       MPI_Get_count(&recv_status[i%2], MPI_FLOAT, &peerlen);
-      std::merge(
-        this->data,
-        this->data + this->block_len,
-        mergebuf[i%2] + this->block_len,
-        mergebuf[i%2] + this->block_len + peerlen,
-        mergebuf[i%2]);
-      if (direction == 1)
+      if (((direction == 1) && (this->data[this->block_len - 1] > mergebuf[i%2][this->block_len])) 
+      || ((direction == -1) && (this->data[0] < mergebuf[i%2][this->block_len + peerlen - 1])))
       {
-        memcpy(this->data, mergebuf[i%2], this->block_len * sizeof(float));
-      }
-      else // direction == -1
-      {
-        memcpy(this->data, mergebuf[i%2] + peerlen, this->block_len * sizeof(float));
+        std::merge(
+          this->data,
+          this->data + this->block_len,
+          mergebuf[i%2] + this->block_len,
+          mergebuf[i%2] + this->block_len + peerlen,
+          mergebuf[i%2]);
+        if (direction == 1)
+        {
+          memcpy(this->data, mergebuf[i%2], this->block_len * sizeof(float));
+        }
+        else // direction == -1
+        {
+          memcpy(this->data, mergebuf[i%2] + peerlen, this->block_len * sizeof(float));
+        }
       }
     }
 
