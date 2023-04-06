@@ -76,10 +76,12 @@ void Worker::sort()
     }
 
     // STEP 4 : merge if needed
-    if ((peerrank >= 0) && peervalid)
+    if (peervalid)
     {
       MPI_Wait(&recv_request[i%2], &recv_status[i%2]);
       MPI_Get_count(&recv_status[i%2], MPI_FLOAT, &peerlen);
+      
+      
       if (((direction == 1) && (this->data[this->block_len - 1] > mergebuf[i%2][this->block_len])) 
       || ((direction == -1) && (this->data[0] < mergebuf[i%2][this->block_len + peerlen - 1])))
       {
@@ -89,6 +91,8 @@ void Worker::sort()
           mergebuf[i%2] + this->block_len,
           mergebuf[i%2] + this->block_len + peerlen,
           mergebuf[i%2]);
+        // data will be accessed @ memcpy so we should ensure sending has finished
+        MPI_Wait(&send_request[i%2], &send_status[i%2]);
         if (direction == 1)
         {
           memcpy(this->data, mergebuf[i%2], this->block_len * sizeof(float));
@@ -97,6 +101,10 @@ void Worker::sort()
         {
           memcpy(this->data, mergebuf[i%2] + peerlen, this->block_len * sizeof(float));
         }
+      }
+      else
+      {
+        MPI_Wait(&send_request[i%2], &send_status[i%2]);
       }
     }
 
@@ -113,11 +121,6 @@ void Worker::sort()
         &send_request[(i+1)%2]);
     }
     
-    // STEP 6 : wait for the send request in last epoch
-    if (peervalid)
-    {
-      MPI_Wait(&send_request[i%2], &send_status[i%2]);
-    }
   }
 
   // STEP 7 : delete space
