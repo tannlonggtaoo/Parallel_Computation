@@ -1,0 +1,153 @@
+1*1
+Process 0 handles [0, 100000000)
+Rank 0: pass
+Execution time of function sort is 12508.944000 ms.
+Process 0: finalize
+1*2
+Process 1 handles [50000000, 100000000)
+Rank 1: pass
+Process 1: finalize
+Process 0 handles [0, 50000000)
+Rank 0: pass
+Execution time of function sort is 6748.155000 ms.
+Process 0: finalize
+1*4
+Process 1 handles [25000000, 50000000)
+Rank 1: pass
+Process 1: finalize
+Process 3 handles [75000000, 100000000)
+Rank 3: pass
+Process 3: finalize
+Process 0 handles [0, 25000000)
+Rank 0: pass
+Execution time of function sort is 3747.625000 ms.
+Process 0: finalize
+Process 2 handles [50000000, 75000000)
+Rank 2: pass
+Process 2: finalize
+1*8
+Process 7 handles [87500000, 100000000)
+Rank 7: pass
+Process 7: finalize
+Process 0 handles [0, 12500000)
+Rank 0: pass
+Execution time of function sort is 2249.537000 ms.
+Process 0: finalize
+Process 1 handles [12500000, 25000000)
+Rank 1: pass
+Process 1: finalize
+Process 4 handles [50000000, 62500000)
+Rank 4: pass
+Process 4: finalize
+Process 2 handles [25000000, 37500000)
+Rank 2: pass
+Process 2: finalize
+Process 6 handles [75000000, 87500000)
+Rank 6: pass
+Process 6: finalize
+Process 3 handles [37500000, 50000000)
+Rank 3: pass
+Process 3: finalize
+Process 5 handles [62500000, 75000000)
+Rank 5: pass
+Process 5: finalize
+1*16
+Process 1 handles [6250000, 12500000)
+Rank 1: pass
+Process 1: finalize
+Process 6 handles [37500000, 43750000)
+Rank 6: pass
+Process 6: finalize
+Process 10 handles [62500000, 68750000)
+Rank 10: pass
+Process 10: finalize
+Process 13 handles [81250000, 87500000)
+Rank 13: pass
+Process 13: finalize
+Process 8 handles [50000000, 56250000)
+Rank 8: pass
+Process 8: finalize
+Process 7 handles [43750000, 50000000)
+Rank 7: pass
+Process 7: finalize
+Process 15 handles [93750000, 100000000)
+Rank 15: pass
+Process 15: finalize
+Process 9 handles [56250000, 62500000)
+Rank 9: pass
+Process 9: finalize
+Process 14 handles [87500000, 93750000)
+Rank 14: pass
+Process 14: finalize
+Process 2 handles [12500000, 18750000)
+Rank 2: pass
+Process 2: finalize
+Process 3 handles [18750000, 25000000)
+Rank 3: pass
+Process 3: finalize
+Process 0 handles [0, 6250000)
+Rank 0: pass
+Execution time of function sort is 1454.748000 ms.
+Process 0: finalize
+Process 12 handles [75000000, 81250000)
+Rank 12: pass
+Process 12: finalize
+Process 5 handles [31250000, 37500000)
+Rank 5: pass
+Process 5: finalize
+Process 4 handles [25000000, 31250000)
+Rank 4: pass
+Process 4: finalize
+Process 11 handles [68750000, 75000000)
+Rank 11: pass
+Process 11: finalize
+2*16
+Process 2 handles [12500000, 18750000)
+Rank 2: pass
+Process 2: finalize
+Process 12 handles [75000000, 81250000)
+Rank 12: pass
+Process 12: finalize
+Process 15 handles [93750000, 100000000)
+Rank 15: pass
+Process 15: finalize
+Process 14 handles [87500000, 93750000)
+Rank 14: pass
+Process 14: finalize
+Process 9 handles [56250000, 62500000)
+Rank 9: pass
+Process 9: finalize
+Process 11 handles [68750000, 75000000)
+Rank 11: pass
+Process 11: finalize
+Process 13 handles [81250000, 87500000)
+Rank 13: pass
+Process 13: finalize
+Process 10 handles [62500000, 68750000)
+Rank 10: pass
+Process 10: finalize
+Process 8 handles [50000000, 56250000)
+Rank 8: pass
+Process 8: finalize
+Process 0 handles [0, 6250000)
+Rank 0: pass
+Execution time of function sort is 1001.983000 ms.
+Process 0: finalize
+Process 7 handles [43750000, 50000000)
+Rank 7: pass
+Process 7: finalize
+Process 5 handles [31250000, 37500000)
+Rank 5: pass
+Process 5: finalize
+Process 3 handles [18750000, 25000000)
+Rank 3: pass
+Process 3: finalize
+Process 4 handles [25000000, 31250000)
+Rank 4: pass
+Process 4: finalize
+Process 6 handles [37500000, 43750000)
+Rank 6: pass
+Process 6: finalize
+Process 1 handles [6250000, 12500000)
+Rank 1: pass
+Process 1: finalize

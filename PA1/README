@@ -1,0 +1,8 @@
+部分文件的说明：
+data：数据链接
+findprocnum_result.txt：findprocnum.sh的运行结果
+findprocnum.sh：网格搜索不同数据量下最佳进程数的脚本
+odd_even_sort：实现sort函数
+result.txt：test.sh的运行结果
+run.sh：进行性能测试的脚本，运行例：./run.sh ./odd_even_sort 100 ./data/100.dat
+test.sh：完成实验报告c部分测试的脚本
