@@ -1,0 +1,5 @@
+Elapsed time: 2.0728 seconds, performance: 15.8088 GFlops
+Elapsed time: 1.9437 seconds, performance: 16.8587 GFlops
+Elapsed time: 1.9050 seconds, performance: 17.2014 GFlops
+Elapsed time: 1.7867 seconds, performance: 18.3395 GFlops
+Elapsed time: 1.8951 seconds, performance: 17.2906 GFlops
