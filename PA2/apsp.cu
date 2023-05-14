@@ -183,13 +183,14 @@ __global__ void step3(const int p, const int n, int* graph)
     {
         colblk[y][x] = dmax;
     }
-    __syncthreads();
+    //__syncthreads();
 
     // update!
     int newchoice;
     if (xg < n && yg < n)
     {
 	newchoice = graph[yg * n + xg];
+	__syncthreads();
     	#pragma unroll
     	for (int k = 0; k < b; k++)
     	{
