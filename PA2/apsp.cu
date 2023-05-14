@@ -214,6 +214,22 @@ __global__ void step3(const int p, const int n, int* graph)
 
 }   //namespace
 
+void printcudamem(/* device */ int *graph, int n)
+{
+    int* tmp = (int*)malloc(n*n);
+    cudaMemcpy(tmp, graph, n*n, cudaMemcpyDeviceToHost);
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("%d ",tmp[i*n+j]);
+        }
+        printf("\n");
+    }
+
+    free(tmp);
+}
+
 void apsp(int n, /* device */ int *graph) {
     dim3 thr(b, b);     // size of each block
     dim3 nblk_s1(1,1);                               // diagnal
@@ -223,6 +239,7 @@ void apsp(int n, /* device */ int *graph) {
     for (int p = 0; p < (n - 1) / b + 1; p++)
     {
         step1<<<nblk_s1, thr>>>(p, n, graph);
+        printcudamem(graph,n);
         step2<<<nblk_s1, thr>>>(p, n, graph);
         step3<<<nblk_s1, thr>>>(p, n, graph);
     }
