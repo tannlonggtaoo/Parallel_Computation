@@ -74,8 +74,6 @@ __global__ void step2(const int p, const int n, int* graph)
     int xg = p * blockDim.x + x;
     int yg = p * blockDim.y + y;
 
-    // printf("p=%d,x=%d,y=%d,xg=%d,yg=%d\n",p,x,y,xg,yg);
-
     // have to load 2 blks to shared memory
     // 1st: the p-th diagnal block
     // 2nd: the corresponding 'other block' determined by blkIdx
