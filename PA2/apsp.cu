@@ -46,7 +46,7 @@ __global__ void step1(const int p, const int n, int* graph)
     {
         newchoice = cache[y][k] + cache[k][x];
         __syncthreads(); // cache will be modified in the following lines
-        cache[y][x] = min(cache[y][x], newchoice)
+        cache[y][x] = min(cache[y][x], newchoice);
         __syncthreads();
     }
 
@@ -121,7 +121,7 @@ __global__ void step2(const int p, const int n, int* graph)
         {
             newchoice = diagnal[y][k] + cache[k][x];
             __syncthreads();
-            cache[y][x] = min(cache[y][x], newchoice)
+            cache[y][x] = min(cache[y][x], newchoice);
             __syncthreads();
         }
     }
@@ -132,7 +132,7 @@ __global__ void step2(const int p, const int n, int* graph)
         {
             newchoice = cache[y][k] + diagnal[k][x];
             __syncthreads();
-            cache[y][x] = min(cache[y][x], newchoice)
+            cache[y][x] = min(cache[y][x], newchoice);
             __syncthreads();
         }
     }
@@ -201,7 +201,7 @@ __global__ void step3(const int p, const int n, int* graph)
     {
         newchoice = rowblk[y][k] + colblk[k][x];
         __syncthreads(); // cache will be modified in the following lines
-        cache[y][x] = min(cache[y][x], newchoice)
+        cache[y][x] = min(cache[y][x], newchoice);
         __syncthreads();
     }
     // send results back to global memory
