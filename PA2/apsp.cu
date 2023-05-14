@@ -191,10 +191,17 @@ __global__ void step3(const int p, const int n, int* graph)
     {
 	newchoice = graph[abspos];
 	__syncthreads();
+        int reg[b]; // b < 128
+        #pragma unroll
+	for (int k = 0; k < b; k++)
+	{
+	    reg[k] = rowblk[y][k] + colblk[k][x];
+	}
+
     	#pragma unroll
     	for (int k = 0; k < b; k++)
     	{
-            newchoice = min(newchoice, rowblk[y][k] + colblk[k][x]);
+            newchoice = min(newchoice, reg[k]);
     	}
     	// send results back to global memory
         graph[abspos] = newchoice;
