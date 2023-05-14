@@ -165,19 +165,10 @@ __global__ void step3(const int p, const int n, int* graph)
     const int xgp = p * blockDim.x + x;
     const int ygp = p * blockDim.y + y;
 
-    __shared__ int cache[b][b];
     __shared__ int rowblk[b][b];    // in the same row
     __shared__ int colblk[b][b];    // in the same col
 
-    // load 3 blocks to shared memory
-    if (xg < n && yg < n)
-    {
-        cache[y][x] = graph[yg * n + xg];
-    }
-    else
-    {
-        cache[y][x] = dmax;
-    }
+    // load 2 blocks to shared memory
     if (xgp < n && yg < n)
     {
         rowblk[y][x] = graph[yg * n + xgp];
@@ -198,18 +189,16 @@ __global__ void step3(const int p, const int n, int* graph)
 
     // update!
     int newchoice;
-    #pragma unroll
-    for (int k = 0; k < b; k++)
-    {
-        newchoice = rowblk[y][k] + colblk[k][x];
-        __syncthreads(); // cache will be modified in the following lines
-        cache[y][x] = min(cache[y][x], newchoice);
-        __syncthreads();
-    }
-    // send results back to global memory
     if (xg < n && yg < n)
     {
-        graph[yg * n + xg] = cache[y][x];
+	newchoice = graph[yg * n + xg];
+    	#pragma unroll
+    	for (int k = 0; k < b; k++)
+    	{
+            newchoice = min(newchoice, rowblk[y][k] + colblk[k][x]);
+    	}
+    	// send results back to global memory
+        graph[yg * n + xg] = newchoice;
     }
 }
 
