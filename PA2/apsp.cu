@@ -1,7 +1,7 @@
 // PLEASE MODIFY THIS FILE TO IMPLEMENT YOUR SOLUTION
 
 #include "apsp.h"
-
+#include "stdio.h"
 constexpr int b = 32;
 constexpr int dmax = 100000 + 1; // edge weight < 100000 is guaranteed
 
