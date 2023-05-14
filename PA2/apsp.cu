@@ -158,10 +158,10 @@ __global__ void step3(const int p, const int n, int* graph)
     const int x = threadIdx.x;
     const int y = threadIdx.y;
     // global coordinates (on graph), e.g. graph[yg*n + xg]
-    const int xg = blockIdx.x * blockDim.x + x;
-    const int yg = blockIdx.y * blockDim.y + y;
-    const int xgp = p * blockDim.x + x;
-    const int ygp = p * blockDim.y + y;
+    const int xg = blockIdx.x * b + x;
+    const int yg = blockIdx.y * b + y;
+    const int xgp = p * b + x;
+    const int ygp = p * b + y;
 
     __shared__ int rowblk[b][b];    // in the same row
     __shared__ int colblk[b][b];    // in the same col
@@ -183,13 +183,13 @@ __global__ void step3(const int p, const int n, int* graph)
     {
         colblk[y][x] = dmax;
     }
-    //__syncthreads();
 
     // update!
     int newchoice;
+    const int abspos = yg * n + xg;
     if (xg < n && yg < n)
     {
-	newchoice = graph[yg * n + xg];
+	newchoice = graph[abspos];
 	__syncthreads();
     	#pragma unroll
     	for (int k = 0; k < b; k++)
@@ -197,7 +197,7 @@ __global__ void step3(const int p, const int n, int* graph)
             newchoice = min(newchoice, rowblk[y][k] + colblk[k][x]);
     	}
     	// send results back to global memory
-        graph[yg * n + xg] = newchoice;
+        graph[abspos] = newchoice;
     }
 }
 
