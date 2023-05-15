@@ -186,12 +186,14 @@ __global__ void step3(const int p, const int n, int* graph)
 
     // update!
     int newchoice;
+    int newchoice2;
     const int abspos = yg * n + xg;
     if (xg < n && yg < n)
     {
 	newchoice = graph[abspos];
+	newchoice2 = newchoice;
+        register int reg[b]; // b < 128
 	__syncthreads();
-        int reg[b]; // b < 128
         #pragma unroll
 	for (int k = 0; k < b; k++)
 	{
@@ -199,12 +201,13 @@ __global__ void step3(const int p, const int n, int* graph)
 	}
 
     	#pragma unroll
-    	for (int k = 0; k < b; k++)
+    	for (int k = 0; k < b; k+=2)	// assume b is even
     	{
-            newchoice = min(newchoice, reg[k]);
+            newchoice = (newchoice < reg[k]) ? newchoice : reg[k];
+	    newchoice2 = (newchoice2 < reg[k+1]) ? newchoice2 : reg[k+1];
     	}
     	// send results back to global memory
-        graph[abspos] = newchoice;
+        graph[abspos] = newchoice < newchoice2 ? newchoice : newchoice2;
     }
 }
 
