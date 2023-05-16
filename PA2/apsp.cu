@@ -193,22 +193,22 @@ __global__ void step3(const int p, const int n, int* graph)
     {
 	newchoice = graph[abspos];
 	nc2 = newchoice;
-        register int reg[b]; // b < 128
+    register int reg[b]; // b < 128
 	__syncthreads();
-        #pragma unroll
+    #pragma unroll
 	for (int k = 0; k < b; k++)
 	{
 	    reg[k] = rowblk[y][k] + colblk[k][x];
 	}
 
-    	#pragma unroll
-    	for (int k = 0; k < b; k+=2)	// assume b % 2 == 0
-    	{
-            newchoice = (newchoice < reg[k]) ? newchoice : reg[k];
+    #pragma unroll
+    for (int k = 0; k < b; k+=2)	// assume b % 2 == 0
+    {
+        newchoice = (newchoice < reg[k]) ? newchoice : reg[k];
 	    nc2 = (nc2 < reg[k+1]) ? nc2 : reg[k+1];
-    	}
-    	// send results back to global memory
-        graph[abspos] = newchoice < nc2 ? newchoice : nc2;
+    }
+    // send results back to global memory
+    graph[abspos] = newchoice < nc2 ? newchoice : nc2;
     }
 }
 
