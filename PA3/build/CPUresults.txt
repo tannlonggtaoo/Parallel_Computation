@@ -1,0 +1,14 @@
+CPU_ref
+[..0874/PA3/src/util.cu:74 (argParse)] dset = "arxiv" (std::string)
+[..st/test_spmm_cpu.cpp:50 (TestBody)] time = 0.236304 (double)
+[..0874/PA3/src/util.cu:74 (argParse)] dset = "ddi" (std::string)
+[..st/test_spmm_cpu.cpp:50 (TestBody)] time = 0.40305 (double)
+[..0874/PA3/src/util.cu:74 (argParse)] dset = "yelp" (std::string)
+[..st/test_spmm_cpu.cpp:50 (TestBody)] time = 2.83016 (double)
+CPU_OpenMP
+[..0874/PA3/src/util.cu:74 (argParse)] dset = "arxiv" (std::string)
+[..st/test_spmm_cpu.cpp:50 (TestBody)] time = 0.0124073 (double)
+[..0874/PA3/src/util.cu:74 (argParse)] dset = "ddi" (std::string)
+[..st/test_spmm_cpu.cpp:50 (TestBody)] time = 0.0236234 (double)
+[..0874/PA3/src/util.cu:74 (argParse)] dset = "yelp" (std::string)
+[..st/test_spmm_cpu.cpp:50 (TestBody)] time = 0.133926 (double)

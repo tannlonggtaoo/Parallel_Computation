@@ -1,0 +1,51 @@
+[..0874/PA3/src/util.cu:74 (argParse)] dset = "arxiv" (std::string)
+[..0874/PA3/src/data.cu:5 (load_graph)] loading
+[..74/PA3/test/main.cpp:15 (main)] kLen = 32 (int)
+Note: Google Test filter = SpMMCPUTest.*
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from SpMMCPUTest
+[ RUN      ] SpMMCPUTest.validation
+[       OK ] SpMMCPUTest.validation (283 ms)
+[ RUN      ] SpMMCPUTest.opt_performance
+[..st/test_spmm_cpu.cpp:50 (TestBody)] time = 0.0124073 (double)
+[       OK ] SpMMCPUTest.opt_performance (323 ms)
+[----------] 2 tests from SpMMCPUTest (606 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (607 ms total)
+[  PASSED  ] 2 tests.
+[..0874/PA3/src/util.cu:74 (argParse)] dset = "ddi" (std::string)
+[..0874/PA3/src/data.cu:5 (load_graph)] loading
+[..74/PA3/test/main.cpp:15 (main)] kLen = 32 (int)
+Note: Google Test filter = SpMMCPUTest.*
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from SpMMCPUTest
+[ RUN      ] SpMMCPUTest.validation
+[       OK ] SpMMCPUTest.validation (445 ms)
+[ RUN      ] SpMMCPUTest.opt_performance
+[..st/test_spmm_cpu.cpp:50 (TestBody)] time = 0.0236234 (double)
+[       OK ] SpMMCPUTest.opt_performance (592 ms)
+[----------] 2 tests from SpMMCPUTest (1037 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (1037 ms total)
+[  PASSED  ] 2 tests.
+[..0874/PA3/src/util.cu:74 (argParse)] dset = "yelp" (std::string)
+[..0874/PA3/src/data.cu:5 (load_graph)] loading
+[..74/PA3/test/main.cpp:15 (main)] kLen = 32 (int)
+Note: Google Test filter = SpMMCPUTest.*
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from SpMMCPUTest
+[ RUN      ] SpMMCPUTest.validation
+[       OK ] SpMMCPUTest.validation (3140 ms)
+[ RUN      ] SpMMCPUTest.opt_performance
+[..st/test_spmm_cpu.cpp:50 (TestBody)] time = 0.133926 (double)
+[       OK ] SpMMCPUTest.opt_performance (3377 ms)
+[----------] 2 tests from SpMMCPUTest (6518 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (6518 ms total)
+[  PASSED  ] 2 tests.

@@ -1016,9 +1016,9 @@ third_party/googletest/googletest/CMakeFiles/gtest.dir/clean:
 # Target rules for target test/CMakeFiles/unit_tests.dir
 
 # All Build rule for target.
-test/CMakeFiles/unit_tests.dir/all: CMakeFiles/expspmm.dir/all
 test/CMakeFiles/unit_tests.dir/all: third_party/googletest/googletest/CMakeFiles/gtest_main.dir/all
 test/CMakeFiles/unit_tests.dir/all: third_party/googletest/googletest/CMakeFiles/gtest.dir/all
+test/CMakeFiles/unit_tests.dir/all: CMakeFiles/expspmm.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/course/hpc/users/2019010874/PA3/build/CMakeFiles --progress-num=14,15,16,17,18 "Built target unit_tests"
