@@ -2,7 +2,7 @@
 
 constexpr int THRBLK_SIZE = 128; // thread block size
 constexpr int ROWBLK_SIZE = 32;  // #rows for each thread block
-constexpr int INFEATURE_MAX = 256
+constexpr int INFEATURE_MAX = 256;
 
 __global__ void spmm_kernel_placeholder(int *ptr, int *idx, float *val, float *vin, float *vout, int num_v, int INFEATURE)
 {
@@ -23,7 +23,7 @@ __global__ void spmm_kernel_placeholder(int *ptr, int *idx, float *val, float *v
 
     // params for this thread
     const int vallo = ptr[rblklo] + threadIdx.x * valcnt;
-    const int valhi = min(ptr[rblklo] + (threadIdx.x + 1) * valcnt, ptr[rblkhi]) // not included as well
+    const int valhi = min(ptr[rblklo] + (threadIdx.x + 1) * valcnt, ptr[rblkhi]); // not included as well
     
     // find which row(s) this thread is handling
     int rlo = rblklo;
