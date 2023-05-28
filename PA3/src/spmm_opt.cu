@@ -11,12 +11,12 @@ __global__ void spmm_kernel_placeholder(int *ptr, int *idx, float *val, float *v
     const int rblklo = blockIdx.x * ROWBLK_SIZE; // row block begin row
     const int rblkhi = min((blockIdx.x + 1) * blockDim.x, num_v); // row block end row (not included)
     const int valcnt = (ptr[rblkhi] - ptr[rblklo] + THRBLK_SIZE - 1) / THRBLK_SIZE; // len(ptr) = num_v + 1
-    __shared__ int ansbuf[ROWBLK_SIZE][INFEATURE_MAX]; // should use constexpr so define INFEATURE_MAX (assume INFEATURE <= 256)
+    __shared__ int ansbuf[ROWBLK_SIZE * INFEATURE_MAX]; // should use constexpr so define INFEATURE_MAX (assume INFEATURE <= 256)
     // shared memory is NOT INITIALIZED
     int cnt4eachthr = ROWBLK_SIZE * INFEATURE / THRBLK_SIZE;
     for (int i = cnt4eachthr * threadIdx.x; i < cnt4eachthr * (threadIdx.x + 1); i++)
     {
-        ((int*)ansbuf)[i] = 0;
+        ansbuf[i] = 0;
     }
     __syncthreads();
     // (segmentation here is the same as STEP 3)
@@ -48,7 +48,7 @@ __global__ void spmm_kernel_placeholder(int *ptr, int *idx, float *val, float *v
                 result += vin[idx[i] * INFEATURE + j] * val[i];
             }
             // may try other scopes (now on device)
-            atomicAdd(&(ansbuf[r][j]), result);
+            atomicAdd(ansbuf[r * INFEATURE_MAX + j], result);
         }
     }
     __syncthreads();
@@ -56,7 +56,7 @@ __global__ void spmm_kernel_placeholder(int *ptr, int *idx, float *val, float *v
     // STEP 3 move to global memory
     for (int i = cnt4eachthr * threadIdx.x; i < cnt4eachthr * (threadIdx.x + 1); i++)
     {
-        vout[rblklo * INFEATURE + i] = ((int*)ansbuf)[i];
+        vout[rblklo * INFEATURE + i] = ansbuf[i];
     }
 }
 void SpMMOpt::preprocess(float *vin, float *vout)
