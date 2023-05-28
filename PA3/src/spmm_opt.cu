@@ -2,6 +2,12 @@
 
 __global__ void spmm_kernel_placeholder(int *ptr, int *idx, float *val, float *vin, float *vout, int num_v, int INFEATURE)
 {
+    // notes:
+    // ptr,idx,val: sparse matrix A
+    // vin: dense matrix B
+    // vout: dense matrix C
+    // num_v: M (or len(ptr))
+    // INFEATURE: K (or --len param)
     int tid = blockIdx.x * blockDim.x + threadIdx.x;
     if (tid >= num_v) return;
     int begin = ptr[tid], end = ptr[tid + 1];
