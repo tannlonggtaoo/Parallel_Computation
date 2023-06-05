@@ -12,7 +12,7 @@ __global__ void spmm_kernel_placeholder(int *ptr, int *idx, float *val, float *v
 	// 0 to feat_in
     const int tid = threadIdx.y * WARP_SIZE + threadIdx.x;	
 	// 0 to WARP_SIZE*BLOCK_SIZE
-	if (rid >= num_v) return;
+	if ((rid >= num_v) || (cid >= INFEATURE)) return;
 
 	extern __shared__ int sm[];
 	int* sm_k = sm;   									// for caching idx
@@ -21,37 +21,29 @@ __global__ void spmm_kernel_placeholder(int *ptr, int *idx, float *val, float *v
 
 	int begin = ptr[rid], end = ptr[rid + 1];
 	float result = 0.0f;
-	int k;
+	int k,p,kk,cur;		// iter vars
 
 	// iteration over whole row
-	for (int p = begin; p < end; p+=WARP_SIZE)
+	for (p = begin; p < end; p+=WARP_SIZE)
 	{
+		cur = p + threadIdx.x;
 		// loading A (caching)
-		if (p + threadIdx.x < end)
+		if (cur < end)
 		{
-			sm_k[tid] = idx[p + threadIdx.x];
-			sm_v[tid] = val[p + threadIdx.x];
+			sm_k[tid] = idx[cur];
+			sm_v[tid] = val[cur];
 		}
 		__syncwarp();	// wait till all float num loaded
 		
 		// computation
-		for (int kk = 0; kk < WARP_SIZE; kk++)
+		for (kk = 0; (kk < WARP_SIZE) && (p + kk < end); kk++)
 		{
-			if (p + kk < end)
-			{
-				k = sm_k[sm_base + kk];		// corresponding idx
-				if (cid < INFEATURE)
-				{
-					result += sm_v[sm_base + kk] * vin[k * INFEATURE + cid];
-				}
-			}
+			k = sm_k[sm_base + kk];		// corresponding idx
+			result += sm_v[sm_base + kk] * vin[k * INFEATURE + cid];
 		}
 		__syncwarp();
 	}
-	if (cid < INFEATURE)
-	{
-		vout[rid * INFEATURE + cid] = result;
-	}
+	vout[rid * INFEATURE + cid] = result;
 }
 void SpMMOpt::preprocess(float *vin, float *vout)
 {
